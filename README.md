@@ -157,3 +157,4 @@ Private routes need the header `Authorization: Bearer <token>` (token comes from
 - Product reviews and ratings
 - Product recommendations
 # trendora
+# trendora
