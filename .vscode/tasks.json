@@ -1,0 +1,284 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Trendora Client",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"Client",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"0.0.0.0",
+				"--port",
+				"5173"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Install Trendora Client Dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--prefix",
+				"Client"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Install Trendora Admin Dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--prefix",
+				"Admin"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Install Trendora Server Dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--prefix",
+				"Server"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Trendora Admin",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"Admin",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"0.0.0.0",
+				"--port",
+				"5174"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Trendora Server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"Server",
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Install all Trendora dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Install Trendora dependencies",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd '/d/RW/my projects/trendora/Server' && npm install; cd '/d/RW/my projects/trendora/Client' && npm install; cd '/d/RW/my projects/trendora/Admin' && npm install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Server dependencies",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Server && npm install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Client dependencies",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Client && npm install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Admin dependencies",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Admin && npm install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Trendora API",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Server && npm start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Trendora Client",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Client && npm run dev -- --host 0.0.0.0"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Trendora Admin",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Admin && npm run dev -- --host 0.0.0.0"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Seed Trendora database",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Server && npm run seed"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Trendora API in dev mode",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"cd D:/RW/my\\ projects/trendora/Server && npm run dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Restart API in dev mode",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"pid=$(netstat -ano | grep ':5000 ' | awk 'NR==1 {print $NF}'); if [ -n \"$pid\" ]; then taskkill //PID \"$pid\" //F; fi; cd D:/RW/my\\ projects/trendora/Server && npm run dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Find API listener",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"netstat -ano | grep 5000"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start API Dev Port 5000",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"taskkill //PID 8700 //F; cd D:/RW/my\\ projects/trendora/Server && npm run dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Server dev",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"Server",
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Client Vite dev server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"Client",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"0.0.0.0"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Admin Vite dev server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"Admin",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"0.0.0.0"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
